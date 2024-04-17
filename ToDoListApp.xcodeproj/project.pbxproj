@@ -32,6 +32,7 @@
 		18A237882BD048BB00014F07 /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A237872BD048BB00014F07 /* ToDoListItemViewViewModel.swift */; };
 		18A2378A2BD05AD300014F07 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A237892BD05AD300014F07 /* HeaderView.swift */; };
 		18A2378C2BD0601300014F07 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2378B2BD0601300014F07 /* TLButton.swift */; };
+		18A2378E2BD07B1900014F07 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2378D2BD07B1900014F07 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		18A237872BD048BB00014F07 /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		18A237892BD05AD300014F07 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		18A2378B2BD0601300014F07 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		18A2378D2BD07B1900014F07 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				18A237652BD045AB00014F07 /* GoogleService-Info.plist */,
 				18A237502BD0442300014F07 /* ToDoListAppApp.swift */,
+				18A2378D2BD07B1900014F07 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				18A237842BD048A800014F07 /* LoginViewViewModel.swift in Sources */,
 				18A237512BD0442300014F07 /* ToDoListAppApp.swift in Sources */,
 				18A237862BD048B100014F07 /* RegistrationViewViewModel.swift in Sources */,
+				18A2378E2BD07B1900014F07 /* Extensions.swift in Sources */,
 				18A2377A2BD0485D00014F07 /* ToDoListItem.swift in Sources */,
 				18A237702BD047D200014F07 /* NewItemView.swift in Sources */,
 				18A237822BD0489F00014F07 /* NewItemViewViewModel.swift in Sources */,
