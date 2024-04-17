@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var emailText = ""
-    @State private var passwordText = ""
+    @StateObject private var vm = LoginViewViewModel()
+
     
     var body: some View {
         NavigationStack {
@@ -18,38 +18,34 @@ struct LoginView: View {
                
                 HeaderView(title: "ToDo List", subtitle: "Get stuff done.", angle: 15, background: .pink)
                 
-                //login
+               
                 Form {
-                    TextField("Email Address", text: $emailText)
+                    if  !vm.errorMessage.isEmpty {
+                        Text(vm.errorMessage)
+                            .foregroundStyle(.red)
+                    }
                     
-                    SecureField("Password", text: $passwordText)
-                    
-                    Button(action: {
-                        //try logging in
+                    Group{
+                        TextField("Email Address", text: $vm.email)
                         
-                    }, label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
-                            
-                            Text("Log In")
-                                .foregroundStyle(.white)
-                                .bold()
-                                .padding(3)
-                        }
+                        SecureField("Password", text: $vm.password)
+                    }
+                    .textInputAutocapitalization(.none)
+                    
+                    TLButton(title: "Log in", background: .pink){
+                        vm.login()
+                    }
                         
-                    })
-                    .padding([.bottom, .top], 5)
-                    
-                    
                 }
+                .tint(.pink)
                 .offset(y: -50)
-                //register acct
+                
                 
                 VStack {
                     Text("New around here?")
                     
                     NavigationLink("Create an Account", destination: RegistrationView())
+                        .tint(.pink)
                 }
             }
         }

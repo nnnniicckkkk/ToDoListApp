@@ -31,6 +31,7 @@
 		18A237862BD048B100014F07 /* RegistrationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A237852BD048B100014F07 /* RegistrationViewViewModel.swift */; };
 		18A237882BD048BB00014F07 /* ToDoListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A237872BD048BB00014F07 /* ToDoListItemViewViewModel.swift */; };
 		18A2378A2BD05AD300014F07 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A237892BD05AD300014F07 /* HeaderView.swift */; };
+		18A2378C2BD0601300014F07 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2378B2BD0601300014F07 /* TLButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		18A237852BD048B100014F07 /* RegistrationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewViewModel.swift; sourceTree = "<group>"; };
 		18A237872BD048BB00014F07 /* ToDoListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewViewModel.swift; sourceTree = "<group>"; };
 		18A237892BD05AD300014F07 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		18A2378B2BD0601300014F07 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				18A2376D2BD047C600014F07 /* ToDoListView.swift */,
 				18A2376F2BD047D200014F07 /* NewItemView.swift */,
 				18A237712BD047EA00014F07 /* LoginView.swift */,
+				18A2378B2BD0601300014F07 /* TLButton.swift */,
 				18A237732BD047FB00014F07 /* RegistrationView.swift */,
 				18A237752BD0482400014F07 /* ToDoListItemView.swift */,
 				18A237892BD05AD300014F07 /* HeaderView.swift */,
@@ -242,6 +245,7 @@
 				18A2376E2BD047C600014F07 /* ToDoListView.swift in Sources */,
 				18A237742BD047FB00014F07 /* RegistrationView.swift in Sources */,
 				18A2377E2BD0488D00014F07 /* ProfileViewViewModel.swift in Sources */,
+				18A2378C2BD0601300014F07 /* TLButton.swift in Sources */,
 				18A2376C2BD047B800014F07 /* ProfileView.swift in Sources */,
 				18A237782BD0485300014F07 /* User.swift in Sources */,
 				18A237762BD0482400014F07 /* ToDoListItemView.swift in Sources */,
