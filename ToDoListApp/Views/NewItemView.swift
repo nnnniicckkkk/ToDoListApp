@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct NewItemView: View {
+    
+    @StateObject var vm = NewItemViewViewModel()
+    @Binding var newItemPresented: Bool 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("New Item")
+                .font(.system(size: 32))
+                .bold()
+                .padding(.top, 50)
+            
+            Form{
+                //title
+                TextField("Title", text: $vm.title)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                //due
+                DatePicker("Due Date", selection: $vm.dueDate)
+                    .datePickerStyle(.graphical)
+                //button to save
+                TLButton(title: "Save", background: .orange) {
+                    if vm.canSave {
+                        vm.save()
+                        newItemPresented = false
+                    } else {
+                        vm.showAlert = true 
+                    }
+                }
+                .alert(isPresented: $vm.showAlert) {
+                    Alert(title: Text("Error"), message: Text("Please fill in all fields and select a due date that is today or newer."))
+                }
+            }
+        }
+        .tint(.orange)
     }
 }
 
 #Preview {
-    NewItemView()
+    NewItemView(newItemPresented: .constant(true))
 }
