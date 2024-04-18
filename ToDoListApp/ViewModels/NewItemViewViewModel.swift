@@ -9,6 +9,7 @@ import FirebaseFirestore
 import Foundation
 
 class NewItemViewViewModel: ObservableObject {
+    
     @Published var title = ""
     @Published var dueDate = Date()
     @Published var showAlert = false 
@@ -23,7 +24,6 @@ class NewItemViewViewModel: ObservableObject {
         }
         guard let uId = Auth.auth().currentUser?.uid else {
             return
-            
         }
         let newId = UUID().uuidString
         let newItem = ToDoListItem(id: newId, title: title, dueDate: dueDate.timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: false)
@@ -33,7 +33,7 @@ class NewItemViewViewModel: ObservableObject {
         db.collection("users")
             .document(uId)
             .collection("todos")
-            .document("123")
+            .document(newId)
             .setData(newItem.asDictionary())
     }
     

@@ -27,6 +27,7 @@ struct MainView: View {
                 .tabItem{
                     Label("Profile", systemImage: "person")
                 }
+                .tint(.blue)
         }
     }
 }
