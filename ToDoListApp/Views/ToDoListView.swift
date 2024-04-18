@@ -24,11 +24,24 @@ struct ToDoListView: View {
                 List(items) { item in
                     
                     ToDoListItemView(item: item)
-                        .swipeActions {
-                            Button("Delete", role: .destructive){
+                        .swipeActions{
+                            
+                            Button(role: .destructive, action: {
                                 vm.delete(id: item.id)
+                            }, label: {
+                                Image(systemName: "trash")
+                                Text("Delete")
+                                
+                            })
+                
+                        }
+                        .swipeActions(edge: .leading) {
+                            Button {
+                                vm.toggleIsDone(item: item)
+                            } label: {
+                                Image(systemName: item.isDone ? "xmark" : "checkmark")
                             }
-
+                            .tint(item.isDone ? .blue : .green)
                         }
                 }
                 .listStyle(.plain)
