@@ -12,4 +12,11 @@ import Foundation
 //part of the bigger one 
 class ToDoListItemViewViewModel: ObservableObject {
     
+    init(){
+        
+    }
+    
+    func toggleIsDone(item: ToDoListItem) {
+        
+    }
 }
